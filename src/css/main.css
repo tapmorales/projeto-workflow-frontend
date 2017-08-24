@@ -80,20 +80,48 @@ h1, h2, h3, h4, h5, h6, p, a, .title {
       .header-animado__ilustra {
         background-image: url("../imagens/cenario_bg.png");
         height: 300px;
-        position: relative; }
+        position: relative;
+        /*.casas {
+					@include anima('cenario_casas.png', $valor)
+				}*/
+        /*.rua {
+					@include anima('cenario_rua.png', $valor)
+				}*/
+        /*.carrosCima {
+					@include anima('cenario_carrosCima.png', $valor)
+				}*/
+        /*.carrosBaixo {
+					@include anima('cenario_carrosBaixo.png', $valor)
+				}*/
+        /*.nuvens {
+				@include anima('cenario_nuvens.png', '30s linear infinite reverse');
+			}
+
+			.casas {
+				@include anima('cenario_casas.png', '30s linear infinite reverse');
+			}
+
+			.rua {
+				@include anima('cenario_rua.png', '30s linear infinite reverse');
+			}
+
+			.carrosCima {
+				@include anima('cenario_carrosCima.png', '15s linear infinite reverse');
+			}
+
+			.carrosBaixo{
+				@include anima('cenario_carrosBaixo.png', '15s linear infinite');
+			}*/ }
         .header-animado__ilustra > div {
           display: block;
           height: 100%;
           position: absolute;
           top: 0;
           left: 0;
-          width: 400px; }
-        .header-animado__ilustra .nuvens {
-          background-image: url("../imagens/cenario_nuvens.png");
-          animation: anima_cenario 30s linear infinite reverse; }
+          width: 4800px; }
         .header-animado__ilustra .casas {
           background-image: url("../imagens/cenario_casas.png");
-          animation: anima_cenario 30s linear infinite reverse; }
+          animation: anima_cenario 30s linear infinite reserve; }
         .header-animado__ilustra .rua {
           background-image: url("../imagens/cenario_rua.png");
           animation: anima_cenario 30s linear infinite reverse; }
