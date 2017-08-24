@@ -1,6 +1,6 @@
 .header-animado {
 	$h: 300px;
-	$largura_cenario: 200px;
+	$largura_cenario: 2400px;
 	background-color: $main-color;
 	padding-top: 96px;
 	margin-bottom: 0;
@@ -29,18 +29,18 @@
 		}
 
 		@mixin anima($imagem, $tipo_anima: '90s linear infinite reverse' ){
-				background-image: url('../imagens/#{$imagem}');
-				animation: anima_cenario #{$tipo_anima};
-			}
+			background-image: url('../imagens/#{$imagem}');
+			animation: anima_cenario #{$tipo_anima};
+		}
 
-			@keyframes anima_cenario {
-				from {
-						transform: translateX(-50%)
-						translateZ(0);
-					} to {
-						transform: translateX(0%) translateZ(0);
-					}	
-			}
+		@keyframes anima_cenario {
+			from {
+				transform: translateX(-50%)
+				translateZ(0);
+			} to {
+				transform: translateX(0%) translateZ(0);
+			}	
+		}
 
 		@media screen and (min-width: 480px){
 			background-image:  url('../imagens/cenario_all_1530.png');
@@ -62,17 +62,16 @@
 			
 
 			$items: (
-				casas: '30s linear infinite reserve',
+				casas: '30s linear infinite reverse',
 				rua: '30s linear infinite reverse',
 				carrosCima: '15s linear infinite reverse',
 				carrosBaixo: '15s linear infinite'
-			)
+			);
 
 			@each $key, $valor in $items{
-				.#{$key} {
+				/*.#{$key} {
 					@include anima('cenario_#{$key}.png', $valor)
-				}
-
+				}*/
 
 				@if $valor {
 					.#{$key} {
