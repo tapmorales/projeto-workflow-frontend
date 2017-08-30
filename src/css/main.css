@@ -1,6 +1,16 @@
 h1, h2, h3, h4, h5, h6, p, a, .title {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif; }
 
+.js.menu-opened {
+  overflow: hidden; }
+  .js.menu-opened:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    right: 0; }
+
 .headerNav {
   background-color: #84b8af; }
   .js .headerNav {
@@ -12,7 +22,8 @@ h1, h2, h3, h4, h5, h6, p, a, .title {
     max-width: 350px;
     height: 50px;
     position: relative;
-    top: 10px; }
+    top: 10px;
+    z-index: 20; }
     .headerNav__logo img {
       height: 100%;
       max-width: 100%; }
@@ -22,6 +33,7 @@ h1, h2, h3, h4, h5, h6, p, a, .title {
       display: inline-block;
       float: right;
       height: 100%;
+      width: 20%;
       border: none;
       background-color: transparent;
       color: white;
@@ -29,6 +41,9 @@ h1, h2, h3, h4, h5, h6, p, a, .title {
       padding: .0 .5em; }
       .js .headerNav__hamburgger:hover, .js .headerNav__hamburgger:focus {
         background-color: #74aea5; }
+      @media screen and (min-width: 680px) {
+        .js .headerNav__hamburgger {
+          display: none; } }
   .headerNav__menu {
     list-style: none;
     margin: 0;
@@ -41,10 +56,35 @@ h1, h2, h3, h4, h5, h6, p, a, .title {
       padding: 1em; }
       .headerNav__menu a:hover {
         background-color: #528e84; }
-    .js .headerNav__menu {
-      display: none; }
+    @media screen and (max-width: 680px) {
+      .js .headerNav__menu {
+        background-color: #4f877e;
+        z-index: 999;
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 90%;
+        overflow-y: hidden;
+        bottom: 0;
+        transition: left .3s ease-out; } }
     .menu-opened .headerNav__menu {
       display: block; }
+      @media screen and (max-width: 680px) {
+        .menu-opened .headerNav__menu {
+          left: 0; } }
+    @media screen and (min-width: 680px) {
+      .headerNav__menu {
+        display: inline-block;
+        float: right;
+        height: 50px; }
+        .headerNav__menu li {
+          display: inline-block; }
+          .headerNav__menu li a {
+            border-top: none;
+            transition: all .3s ease-in-out; }
+            .headerNav__menu li a:hover {
+              transform: translateY(5px);
+              box-shadow: 0 5px 15px -10px black; } }
 
 .header-animado {
   background-color: #64a59a;
