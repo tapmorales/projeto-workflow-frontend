@@ -12,7 +12,24 @@
 </head>
 <body>
 	
-	@@include('./inc/nav.html')
+	<nav class="headerNav">
+	<div class="container">
+		<a href="index.html" class="headerNav__logo">
+			<img src="imagens/logo.svg" alt="Logotipo Silvia Silveira">
+		</a>
+		<button aria-controls="main_menu" aria-expanded="false" class="headerNav__hamburgger" type="button">
+			<div class="mainNavgation__hamburggerParties">
+				<span class="sr-only">Menu</span>
+				<i class="fa fa-bars" aria-hidden="true"></i>	
+			</div>
+		</button>
+		<ul class="headerNav__menu menu-openned" id="main_menu" aria-expanded="false">
+			<li><a href="portfolio.html">Portifolio</a></li>
+			<li><a href="sobre.html">Sobre mim</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</div>
+</nav>
 
 	<div class="jumbotron header-animado">
 		<div class="container">
